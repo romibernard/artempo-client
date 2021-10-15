@@ -6,14 +6,13 @@ import UsersContext from '../context/Users/UsersContext';
 
 export default function Home() {
     //Edo. global
-    const ctxPets = useContext(ObrasContext)
+    const ctxObras = useContext(ObrasContext)
     const {
         obras,
         getAllObras
-    } = ctxPets
+    } = ctxObras
 
     const ctxUsers = useContext(UsersContext)
-
     const {
         tokenVerification
     } = ctxUsers
