@@ -2,15 +2,10 @@ import React, { useState, useContext } from 'react'
 import UsersContext from '../context/Users/UsersContext'
 
 export default function Signup() {
-
     // GLOBAL
     const ctxUser = useContext(UsersContext)
-
     const { registerUser } = ctxUser
-
-
     // LOCAL
-
     const [newUser, setNewUser] = useState({
         name: "",
         username: "",
@@ -24,14 +19,11 @@ export default function Signup() {
             ...newUser,
             [event.target.name]: event.target.value
         })
-
     }
-
     const submitData = (event) => {
         event.preventDefault()
         registerUser(newUser)
     }
-
     return (
         <>
             <div class="min-h-screen bg-gray-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
