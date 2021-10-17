@@ -37,7 +37,7 @@ const UsersState = (props) => {
             const res = await axiosClient.post("/api/auth/login", dataForm)
             const token = res.data.data.token
             dispatch({
-                type: "LOGIN",
+                type: "INICIO_SESION_EXITOSO",
                 payload: token
             })
         } catch (error) {

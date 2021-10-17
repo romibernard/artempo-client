@@ -55,7 +55,6 @@ export default function Pets() {
                     </div>
                 </div>
             </div>
-            <hr />
         </>
     )
 }

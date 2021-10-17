@@ -32,12 +32,13 @@ function App() {
         <UsersState>
           <Router>
             <Header />
-
             <Switch>
 
+              {/*priv*/}
+              <PrivateRoute exact path="/perfil" component={Profile} />
               {/*auth*/}
-              <AuthRoute exact path="/login" component={Login} />
-              <AuthRoute exact path="/register" component={Signup} />
+              <AuthRoute exact path="/iniciar-sesion" component={Login} />
+              <AuthRoute exact path="/crear-cuenta" component={Signup} />
               {/*Públicas*/}
               <PublicRoute exact path="/obras/crear" component={CreateObra} />
               <PublicRoute exact path="/obras/:id" component={ObraDetails} />
