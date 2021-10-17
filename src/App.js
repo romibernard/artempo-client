@@ -1,21 +1,28 @@
+import './App.css';
 import {
   Switch,
   BrowserRouter as Router,
-  Route
+  //Route
 } from 'react-router-dom'
-import Header from './components/Layout/Header'; import './App.css';
+//basic
+import Header from './components/Layout/Header';
+import Home from './components/Home';
+//user
+import Login from './components/Login';
+import Signup from './components/Signup';
+import Profile from './components/User/Profile';
+//obras
 import CreateObra from './components/CreateObra'
 import ObraDetails from './components/ObraDetails'
 import Obras from './components/Obras';
-import Home from './components/Home';
+//states
 import UsersState from './context/Users/UsersState';
 import ObrasState from './context/Obras/ObrasState';
+//rutas
+import AuthRoute from './components/Routes/AuthRoute';
+import PublicRoute from './components/Routes/PublicRoute'
+import PrivateRoute from './components/Routes/PrivateRoute'
 
-//import PublicRoute from './components/Routes/PublicRoute'
-//import AuthRoute from './components/Routes/AuthRoute';
-//import PrivateRoute from './components/Routes/PrivateRoute'
-
-//import Profile from './components/User/Profile';
 
 
 function App() {
@@ -28,11 +35,14 @@ function App() {
 
             <Switch>
 
+              {/*auth*/}
+              <AuthRoute exact path="/iniciar-sesion" component={Login} />
+              <AuthRoute exact path="/crear-cuenta" component={Signup} />
               {/*Públicas*/}
-              <Route exact path="/obras/crear" component={CreateObra} />
-              <Route exact path="/obras/:id" component={ObraDetails} />
-              <Route exact path="/obras" component={Obras} />
-              <Route exact path="/" component={Home} />
+              <PublicRoute exact path="/obras/crear" component={CreateObra} />
+              <PublicRoute exact path="/obras/:id" component={ObraDetails} />
+              <PublicRoute exact path="/obras" component={Obras} />
+              <PublicRoute exact path="/" component={Home} />
 
             </Switch>
           </Router>
