@@ -21,10 +21,12 @@ module.exports = {
             indigo: colors.indigo,
             red: colors.rose,
             yellow: colors.amber,
+            blue: colors.blue,
+            violet: colors.violet,
             'turquoise': '#60A5FA',
             'sky': '#BAE6FD',
             'sky-700': '#1D4ED8',
-            'blue': '#3B82F6'
+            'cerulean': '#3B82F6'
         }
     }
 }

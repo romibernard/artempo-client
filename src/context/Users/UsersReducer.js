@@ -7,7 +7,7 @@ const reducer = (globalState, action) => {
                 authStatus: true,
                 user: action.payload
             }
-        case "LOGIN_OK":
+        case "LOGIN":
         case "CREATE_USER_OK":
             localStorage.setItem("token", action.payload)
             return {

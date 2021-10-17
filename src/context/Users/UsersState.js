@@ -23,7 +23,7 @@ const UsersState = (props) => {
             // keep token en local 
             const token = res.data.data.token
             dispatch({
-                type: "CREAR_USUARIO_EXITOSAMENTE",
+                type: "CREATE_USER_OK",
                 payload: token
             })
         } catch (error) {
@@ -37,7 +37,7 @@ const UsersState = (props) => {
             const res = await axiosClient.post("/api/auth/login", dataForm)
             const token = res.data.data.token
             dispatch({
-                type: "INICIO_SESION_EXITOSO",
+                type: "LOGIN",
                 payload: token
             })
         } catch (error) {
@@ -61,7 +61,7 @@ const UsersState = (props) => {
             const res = await axiosClient.get("/api/auth/verifying-token")
             const currentUser = res.data.data.user
             dispatch({
-                type: "OBTENER_USUARIO",
+                type: "GET_USER",
                 payload: currentUser
             })
             console.log(res)
@@ -73,7 +73,7 @@ const UsersState = (props) => {
     //cerrar sesión
     const logoutUser = async () => {
         dispatch({
-            type: "CERRAR_SESION"
+            type: "LOGOUT"
         })
     }
     return (
