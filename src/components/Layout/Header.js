@@ -28,13 +28,16 @@ export default function Header() {
                                 <Link to="/cotiza" class="text-base font-medium text-cerulean hover:text-sky-700" key="Docs">
                                     Cotiza tu obra
                                 </Link>
+                                <Link to="/obras/crear" class="text-base font-medium text-cerulean hover:text-sky-700" key="Solutions">
+                                    Crear obra
+                                </Link>
                             </div>
                         </div>
                         {
                             authStatus ?
                                 <div class="ml-10 space-x-4">
                                     <Link to="/perfil" class="inline-block bg-blue py-2 px-4 border border-transparent rounded-md text-base font-medium text-white hover:bg-opacity-75">Mi perfil</Link>
-                                    <a href="#" onClick={() => { logoutUser() }} class="inline-block bg-white py-2 px-4 border border-transparent rounded-md text-base font-medium text-turquoise hover:bg-blue-50">Cerrar sesión</a>
+                                    <Link to="/" onClick={() => { logoutUser() }} class="inline-block bg-white py-2 px-4 border border-transparent rounded-md text-base font-medium text-turquoise hover:bg-blue-50">Cerrar sesión</Link>
                                 </div>
                                 :
                                 <div class="ml-10 space-x-4">
