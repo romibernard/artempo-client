@@ -9,14 +9,13 @@ export default function CreateObra() {
     //estado local
     const [newObra, setNewObra] = useState({
         name: "",
-        sizeH: "",
-        sizeW: "",
-        sizeP: "",
+        sizeH: 0,
+        sizeW: 0,
+        sizeP: 0,
         materials: "",
         picturesUrl: "",
-        videoUrl: "",
         availableForSale: true,
-        price: ""
+        price: 0
     })
     //edo local
     const handleForm = (event) => {
