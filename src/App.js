@@ -7,6 +7,7 @@ import {
 //basic
 import Header from './components/Layout/Header';
 import Home from './components/Home';
+import AboutUs from './components/About-us'
 //user
 import Login from './components/Login';
 import Signup from './components/Signup';
@@ -38,8 +39,9 @@ function App() {
               <PrivateRoute exact path="/perfil" component={Profile} />
               {/*auth*/}
               <AuthRoute exact path="/iniciar-sesion" component={Login} />
-              <AuthRoute exact path="/crear-cuenta" component={Signup} />
+              <AuthRoute exact path="/register" component={Signup} />
               {/*Públicas*/}
+              <PublicRoute exact path="/about-us" component={AboutUs} />
               <PublicRoute exact path="/obras/crear" component={CreateObra} />
               <PublicRoute exact path="/obras/:id" component={ObraDetails} />
               <PublicRoute exact path="/obras" component={Obras} />
