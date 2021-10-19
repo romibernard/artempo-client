@@ -22,7 +22,7 @@ const AuthRoute = ({ component: Component, ...props }) => {
             render={(props) => {
                 if (loading) return null;
                 return authStatus ? (
-                    <Redirect to="/" />
+                    <Redirect to="/iniciar-sesion" />
                 ) : (
                     <Component {...props} />
                 );
