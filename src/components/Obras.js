@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from 'react'
 import ObrasContext from './../context/Obras/ObrasContext'
 import { Link } from 'react-router-dom'
-import ClipLoader from "react-spinners/ClipLoader";
+import PropagateLoader from "react-spinners/PropagateLoader";
 
 export default function Pets() {
     //Edo. global
@@ -23,7 +23,7 @@ export default function Pets() {
                         {/* PRODUCTO */}
                         {
                             obras.length === 0 ?
-                                <ClipLoader />
+                                <PropagateLoader />
                                 :
                                 obras.map(e => {
                                     return (

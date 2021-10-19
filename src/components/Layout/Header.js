@@ -42,7 +42,7 @@ export default function Header() {
                                 :
                                 <div class="ml-10 space-x-4">
                                     <Link to="/iniciar-sesion" class="inline-block bg-cerulean py-2 px-4 border border-transparent rounded-md text-base font-medium text-white hover:bg-opacity-60">Iniciar sesión</Link>
-                                    <Link to="/register" class="inline-block bg-white py-2 px-4 border border-transparent rounded-md text-base font-medium text-sky-700 hover:bg-sky">Registrarme</Link>
+                                    <Link to="/register" class="inline-block bg-white py-2 px-4 border border-transparent rounded-md text-base font-medium text-sky-700 hover:bg-turquoise">Registrarme</Link>
                                 </div>
                         }
                     </div>
