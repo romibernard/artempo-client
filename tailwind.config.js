@@ -25,6 +25,7 @@ module.exports = {
             violet: colors.violet,
             cyan: colors.cyan,
             teal: colors.teal,
+            blueGray: colors.blueGray,
             'turquoise': '#60A5FA',
             'sky': '#BAE6FD',
             'sky-700': '#1D4ED8',

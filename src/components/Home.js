@@ -38,7 +38,7 @@ export default function Home() {
                                 {/*<p class="mt-4 text-base text-gray-500">Varius facilisi mauris sed sit. Non sed et duis dui leo, vulputate id malesuada non. Cras aliquet purus dui laoreet diam sed lacus, fames.</p>*/}
                             </div>
                             <div class="p-6 bg-gray-50 rounded-bl-2xl rounded-br-2xl md:px-8">
-                                <Link to="/obras" class="text-base font-medium text-blue-800 hover:text-blue-600">Ver más<span aria-hidden="true"> &rarr;</span></Link>
+                                <Link to="/obras" class="text-base font-medium text-blue-800 hover:text-blue-600">Ver todas<span aria-hidden="true"> &rarr;</span></Link>
                             </div>
                         </div>
 
@@ -65,10 +65,10 @@ export default function Home() {
                                     </svg>
                                 </div>
                                 <h3 class="text-xl font-medium text-blue-900">Contacto</h3>
-                                <p class="mt-4 text-base text-gray-500">Personalizar una obra</p>
+                                {/*<p class="mt-4 text-base text-gray-500">Personalizar una obra</p>*/}
                             </div>
                             <div class="p-6 bg-gray-50 rounded-bl-2xl rounded-br-2xl md:px-8">
-                                <Link to="/contacto" class="text-base font-medium text-blue-800 hover:text-blue-600">Solicita tu cotización<span aria-hidden="true"> &rarr;</span></Link>
+                                <Link to="/contacto" class="text-base font-medium text-blue-800 hover:text-blue-600">Personalizaciones y más<span aria-hidden="true"> &rarr;</span></Link>
                             </div>
                         </div>
                     </div>
