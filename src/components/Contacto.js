@@ -5,23 +5,23 @@ import UsersContext from '../context/Users/UsersContext';
 const faqs = [
   {
     question: '¿Puedo solicitar una obra personalizada?',
-    answer: '¡Claro!, solo ponte en contacto con nosotros, especifica lo que te gustaría (escultura, pintura, booknook, etc...) y te haremos llegar una cotización.',
+    answer: '¡Claro!, solo ponte en contacto con nosotros, especifica lo que te gustaría (escultura, pintura, booknook, etc...) y te haremos llegar una cotización. ¡Haz volar tu imaginación!',
   },
   {
-    question: '¿Puedo solicitar una obra personalizada?',
-    answer: '¡Claro!, solo ponte en contacto con nosotros, especifica lo que te gustaría (escultura, pintura, booknook, etc...) y te haremos llegar una cotización.',
+    question: '¿Hacen envíos internacionales y nacionales?',
+    answer: 'Así es. Nuestros envíos a la República Mexicana son sin costo, mientras que los internacionales pueden hacerse con costo de envío.',
   },
   {
-    question: '¿Puedo solicitar una obra personalizada?',
-    answer: '¡Claro!, solo ponte en contacto con nosotros, especifica lo que te gustaría (escultura, pintura, booknook, etc...) y te haremos llegar una cotización.',
+    question: '¿Aceptan tarjetas de débito, crédito, transferencias bancarias y/o manejan MSI?',
+    answer: 'Aceptamos todas las tarjetas Visa y MasterCard; las transferencias bancarias se corroboran en la cuenta mandando el comprobante de pago con la clave única que te haremos llegar. De momento no contamos con MSI, esperamos pronto poderlo implementar.',
   },
   {
-    question: '¿Puedo solicitar una obra personalizada?',
-    answer: '¡Claro!, solo ponte en contacto con nosotros, especifica lo que te gustaría (escultura, pintura, booknook, etc...) y te haremos llegar una cotización.',
+    question: '¿Hay manera de saber el estado de mi envío?',
+    answer: 'Al momento de empaquetar tu obra (con mucho cuidado) te haremos llegar un número de rastreo en tiempo real con la compañía de envíos (DHL / UPS)',
   },
   {
-    question: '¿Puedo solicitar una obra personalizada?',
-    answer: '¡Claro!, solo ponte en contacto con nosotros, especifica lo que te gustaría (escultura, pintura, booknook, etc...) y te haremos llegar una cotización.',
+    question: '         ',
+    answer: '     '
   }
 ]
 
@@ -37,7 +37,7 @@ export default function Contacto() {
           <div>
             <h2 className="text-3xl font-extrabold text-gray-900">Preguntas frecuentes</h2>
           </div>
-          <div className="mt-12 lg:mt-0 lg:col-span-2">
+          <div className="mt-12 lg:mt-10 lg:col-span-2">
             <dl className="space-y-12">
               {faqs.map((faq) => (
                 <div key={faq.question}>
@@ -46,6 +46,52 @@ export default function Contacto() {
                 </div>
               ))}
             </dl>
+          </div>
+        </div>
+        <hr />
+        <div className="max-w-7xl mx-auto py-32 px-4 sm:px-6 lg:py-20 lg:px-8">
+          <div className="divide-y-2 divide-gray-200">
+            <div className="lg:grid lg:grid-cols-3 lg:gap-8">
+              <h2 className="text-2xl font-extrabold text-gray-900 sm:text-3xl">Ponte en contacto</h2>
+              <div className="mt-8 grid grid-cols-1 gap-12 sm:grid-cols-2 sm:gap-x-8 sm:gap-y-12 lg:mt-0 lg:col-span-2">
+                <div>
+                  <h3 className="text-xl leading-6 font-large text-gray-900">Gmail</h3>
+                  <dl className="mt-2 text-base text-gray-500">
+                    <div>
+                      <dt className="sr-only">Email</dt>
+                      <dd>artempostudio@gmail.com</dd>
+                    </div>
+                  </dl>
+                </div>
+                <div>
+                  <h3 className="text-xl leading-6 font-medium text-gray-900">Teléfono</h3>
+                  <dl className="mt-2 text-base text-gray-500">
+                    <div>
+                      <dt className="sr-only">Teléfono</dt>
+                      <dd>+52 735 149 3723</dd>
+                    </div>
+                  </dl>
+                </div>
+                <div>
+                  <h3 className="text-xl leading-6 font-medium text-gray-900">Instagram</h3>
+                  <dl className="mt-2 text-base text-gray-500">
+                    <div>
+                      <dt className="sr-only">Instagram</dt>
+                      <dd>@artempostudio</dd>
+                    </div>
+                  </dl>
+                </div>
+                <div>
+                  <h3 className="text-xl leading-6 font-medium text-gray-900">Facebook</h3>
+                  <dl className="mt-2 text-base text-gray-500">
+                    <div>
+                      <dt className="sr-only">Facebook</dt>
+                      <dd>/artempostudio</dd>
+                    </div>
+                  </dl>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
