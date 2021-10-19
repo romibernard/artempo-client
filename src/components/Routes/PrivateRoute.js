@@ -4,18 +4,13 @@ import UsersContext from './../../context/Users/UsersContext'
 
 const PrivateRoute = ({ component: Component, ...props }) => {
 
-
     const usersCtx = useContext(UsersContext)
     const {
         authStatus,
         tokenVerification
     } = usersCtx
 
-
     const [loading, setLoading] = useState(true)
-
-
-
 
     useEffect(() => {
         const verifyUser = async () => {
@@ -24,8 +19,6 @@ const PrivateRoute = ({ component: Component, ...props }) => {
         }
         verifyUser()
     }, [authStatus])
-
-
 
     return (
         <Route{...props} render={(props) => {
@@ -37,7 +30,6 @@ const PrivateRoute = ({ component: Component, ...props }) => {
 
         }} />
     )
-
-
 }
+
 export default PrivateRoute

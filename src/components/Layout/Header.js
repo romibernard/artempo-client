@@ -2,12 +2,16 @@ import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import UsersContext from '../../context/Users/UsersContext'
 
+
 //import logo from ''
 export default function Header() {
     const ctxUser = useContext(UsersContext)
     const { user, authStatus, logoutUser } = ctxUser
     return (
         <>
+            <title>Artempo Studio</title>
+
+
             <header class="bg-sky">
                 <nav class="max-w-8xl mx-auto px-0 sm:px-4 lg:px-8" aria-label="Top">
                     <div class="w-full py-6 flex items-center justify-between border-b border-turquoise lg:border-none">
@@ -25,12 +29,22 @@ export default function Header() {
                                 <Link to="/about-us" class="text-base font-medium text-cerulean hover:text-sky-700" key="Pricing">
                                     ¿Quiénes somos?
                                 </Link>
-                                <Link to="/cotiza" class="text-base font-medium text-cerulean hover:text-sky-700" key="Docs">
-                                    Cotiza tu obra
+                                <Link to="/contacto" class="text-base font-medium text-cerulean hover:text-sky-700" key="Docs">
+                                    Contáctanos
                                 </Link>
-                                <Link to="/obras/crear" class="text-base font-medium text-cerulean hover:text-sky-700" key="Solutions">
-                                    Crear obra
-                                </Link>
+
+                                {user && user.type === 0 ? (
+                                    <Link
+                                        to="/obras/crear"
+                                        class="text-base font-medium text-cerulean hover:text-sky-700"
+                                        key="Admin"
+                                    >
+                                        Crear obra
+                                    </Link>
+                                ) : (
+                                    ""
+                                )}
+
                             </div>
                         </div>
                         {
@@ -55,8 +69,8 @@ export default function Header() {
                             ¿Quiénes somos?
                         </Link>
 
-                        <Link to="/cotiza" class="text-base font-medium text-white hover:text-turquoise" key="Docs">
-                            Cotiza tu obra
+                        <Link to="/contacto" class="text-base font-medium text-white hover:text-turquoise" key="Docs">
+                            Contáctanos
                         </Link>
                     </div>
                 </nav>

@@ -8,6 +8,7 @@ import {
 import Header from './components/Layout/Header';
 import Home from './components/Home';
 import AboutUs from './components/About-us'
+import Contacto from './components/Contacto'
 //user
 import Login from './components/Login';
 import Signup from './components/Signup';
@@ -29,6 +30,7 @@ import PrivateRoute from './components/Routes/PrivateRoute'
 function App() {
   return (
     <>
+
       <ObrasState>
         <UsersState>
           <Router>
@@ -43,6 +45,7 @@ function App() {
               <AuthRoute exact path="/register" component={Signup} />
 
               {/*Públicas*/}
+              <PublicRoute exact path="/contacto" component={Contacto} />
               <PublicRoute exact path="/about-us" component={AboutUs} />
               <PublicRoute exact path="/obras/crear" component={CreateObra} />
               <PublicRoute exact path="/obras/:id" component={ObraDetails} />

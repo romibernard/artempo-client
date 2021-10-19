@@ -10,7 +10,7 @@ const UsersState = (props) => {
             _id: null,
             username: null,
             email: null,
-            role: 1
+            token: null
         },
         authStatus: false
     }
