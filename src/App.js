@@ -30,15 +30,15 @@ import PrivateRoute from './components/Routes/PrivateRoute'
 function App() {
   return (
     <>
-
-      <ObrasState>
-        <UsersState>
+      <UsersState>
+        <ObrasState>
           <Router>
             <Header />
             <Switch>
 
               {/*priv*/}
               <PrivateRoute exact path="/perfil" component={Profile} />
+              <PrivateRoute exact path="/obras/crear" component={CreateObra} />
 
               {/*auth*/}
               <AuthRoute exact path="/iniciar-sesion" component={Login} />
@@ -47,15 +47,15 @@ function App() {
               {/*Públicas*/}
               <PublicRoute exact path="/contacto" component={Contacto} />
               <PublicRoute exact path="/about-us" component={AboutUs} />
-              <PublicRoute exact path="/obras/crear" component={CreateObra} />
               <PublicRoute exact path="/obras/:id" component={ObraDetails} />
               <PublicRoute exact path="/obras" component={Obras} />
               <PublicRoute exact path="/" component={Home} />
 
             </Switch>
           </Router>
-        </UsersState>
-      </ObrasState>
+        </ObrasState>
+      </UsersState>
+
     </>
   );
 }

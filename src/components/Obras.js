@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from 'react'
 import ObrasContext from './../context/Obras/ObrasContext'
 import { Link } from 'react-router-dom'
-import ClipLoader from "react-spinners/PropagateLoader";
+import ClipLoader from "react-spinners/ClipLoader";
 
 export default function Pets() {
     //Edo. global

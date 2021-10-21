@@ -7,10 +7,9 @@ import UsersReducer from "./UsersReducer"
 const UsersState = (props) => {
     const initialState = {
         user: {
-            _id: null,
-            username: null,
-            email: null,
-            token: null
+            _id: "",
+            username: "",
+            email: "",
         },
         authStatus: false
     }

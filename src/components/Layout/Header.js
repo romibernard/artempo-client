@@ -33,17 +33,25 @@ export default function Header() {
                                     Contáctanos
                                 </Link>
 
-                                {user && user.type === 0 ? (
+                                {user && user.role === 0 ? (
                                     <Link
                                         to="/obras/crear"
                                         class="text-base font-medium text-cerulean hover:text-sky-700"
-                                        key="Admin"
                                     >
                                         Crear obra
                                     </Link>
                                 ) : (
                                     ""
                                 )}
+
+                                {/*
+                                                                <Link
+                                    to="/obras/crear"
+                                    class="text-base font-medium text-cerulean hover:text-sky-700"
+                                >
+                                    Crear obra
+                                </Link>
+                                    */}
 
                             </div>
                         </div>

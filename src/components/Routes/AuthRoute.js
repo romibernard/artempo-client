@@ -16,13 +16,14 @@ const AuthRoute = ({ component: Component, ...props }) => {
         verifyUser();
     }, [authStatus]);
 
+
     return (
         <Route
             {...props}
             render={(props) => {
                 if (loading) return null;
                 return authStatus ? (
-                    <Redirect to="/iniciar-sesion" />
+                    <Redirect to="/" />
                 ) : (
                     <Component {...props} />
                 );
