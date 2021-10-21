@@ -9,7 +9,6 @@ import axios from "axios";
     //Nombre de la configuracion (Preset)
     const namePreset = "artempo";
     const onFileChange = async (e) => {
-        // e.target.files devuelve es un FileList que se comporta como un arreglo a pesar de que no lo es.
         console.log(e.target.files);
 
         // Para poder subir archivos a Cloudinary, vamos a necesitar usar un elemento llamado FormData.
@@ -21,7 +20,7 @@ import axios from "axios";
         data.append("upload_preset", namePreset);
         data.append("file", e.target.files[0]);
 
-        //Enviamos el request a la api para subir el archivo
+        //request a la api para subir el archivo
         const result = await axios.post(cloudinaryAPi, data);
         console.log(result);
         setImage(result.data.secure_url);
@@ -75,6 +74,7 @@ export default function CreateObra() {
         event.preventDefault()
         addObra(newObra)
     }
+
     return (
         <>
             <form className="space-y-8 divide-y divide-gray-200" onSubmit={(e) => {
@@ -197,15 +197,15 @@ export default function CreateObra() {
 
                 <div className="pt-8 space-y-6 sm:pt-10 sm:space-y-5">
                     <div>
-                        <h3 className="text-lg leading-6 font-medium text-gray-900 text-center">DIMENSIONES (cm):</h3>
+                        <h3 className="text-lg leading-6 font-medium text-gray-900 text-center">DIMENSIONES (milímetros):</h3>
                         <h4 className="text-lg leading-6 font-medium text-gray-700 text-center">Recuerda solo poner los números (no letras ni caracteres especiales)</h4>
                     </div>
-                    <div className="space-y-6 sm:space-y-5">
-                        <div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
+                    <div className="space-y-6 sm:space-y-3">
+                        <div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-center sm:border-t sm:border-gray-200 sm:pt-2">
                             <label htmlFor="first-name" className="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
                                 Altura de la obra
                             </label>
-                            <div className="flex-1 block w-full max-w-lg shadow-sm block w-full focus:ring-turquoise focus:border-cerulean sm:text-sm border border-gray-300 rounded-md"
+                            <div className="flex-3 block w-full max-w-lg shadow-sm block focus:ring-turquoise focus:border-cerulean sm:text-sm border border-gray-300 rounded-md"
                             >
                                 <input
                                     value={newObra.sizeH}
