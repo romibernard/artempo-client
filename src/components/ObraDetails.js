@@ -11,7 +11,7 @@ export default function ObraDetails() {
 
         const getResponse = async () => {
             console.log("...");
-            const res = await axiosClient.get(`/api/obras/obra/${id}`);
+            const res = await axiosClient.get(`/api/obras/${id}`);
             console.log(res);
             const obra = res.data.data;
             setObra(obra);
@@ -24,7 +24,7 @@ export default function ObraDetails() {
             <div class="mt-4">
                 <h1 class="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">{obra.name}</h1>
                 <div class="flex items-center">
-                    <p class="text-lg text-gray-900 sm:text-xl">${obra.price}</p>
+                    <p class="text-lg text-gray-900 sm:text-xl">${obra.price}.ºº (MXN)</p>
                 </div>
             </div>
             <div class="mt-4 space-y-6">

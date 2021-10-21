@@ -1,5 +1,5 @@
 //estado global
-import React, { useReducer } from 'react'
+import React, { useReducer, useState } from 'react'
 import ObrasContext from './ObrasContext'
 import ObrasReducer from './ObrasReducer'
 import axiosClient from './../../config/axios'
